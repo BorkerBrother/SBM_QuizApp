@@ -33,6 +33,33 @@
         android:gravity="top"
         tools:ignore="MissingConstraints" />
 
+    <SeekBar
+        android:id="@+id/seekScore"
+        android:layout_width="281dp"
+        android:layout_height="29dp"
+        android:thumbTint="@color/grau_bio"
+        android:progress="10"
+        android:progressTint="@color/grau_bio"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewpager" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bees"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekScore"
+        app:layout_constraintVertical_bias="0.235"
+        tools:ignore="MissingConstraints"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
