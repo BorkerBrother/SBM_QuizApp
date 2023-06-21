@@ -8,86 +8,138 @@
     android:background="@color/bordeauxrot">
 
 
-    <TextView
-        android:id="@+id/question"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/choices_layout"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Frage"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="40dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/choices_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        <SeekBar
+            android:id="@+id/seekScoreQuestion"
+            android:layout_width="205dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="10dp"
+            android:progress="10"
+            android:progressTint="@color/grau_bio"
+            android:thumb="@drawable/seekbar_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling" />
 
-        <Button
-            android:id="@+id/ans_A"
+        <TextView
+            android:id="@+id/questionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:max="10"
+            android:text="1/10"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choices_layout"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/choices_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/grau_bio"
-            android:text="Ans A"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question"
+            tools:ignore="MissingConstraints">
 
-            android:textColor="@color/black" />
+            <Button
+                android:id="@+id/ans_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/grau_bio"
+                android:text="Ans A"
+                android:textColor="@color/black" />
 
+
+            <Button
+                android:id="@+id/ans_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/grau_bio"
+                android:text="Ans B"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ans_C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/grau_bio"
+
+                android:text="Ans C"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/ans_D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/grau_bio"
+                android:text="Ans D"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="363dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="170dp"
+            android:autoSizeTextType="uniform"
+            android:maxHeight="125dp"
+            android:minHeight="125dp"
+            android:text="Frage"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="2sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/ans_B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/submit_btn"
+            android:layout_width="121dp"
+            android:layout_height="24dp"
             android:layout_margin="10dp"
-            android:background="@color/grau_bio"
-            android:text="Ans B"
-            android:textColor="@color/black" />
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seekScoreQuestion"
+            tools:ignore="MissingConstraints,NotSibling" />
 
-        <Button
-            android:id="@+id/ans_C"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/grau_bio"
-            android:text="Ans C"
-            android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="169dp"
+            android:layout_height="124dp"
+            android:gravity="top"
+            app:layout_constraintBottom_toTopOf="@+id/question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sbm_logo_cmyk_4c_300dpi_klein"
+            tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/ans_D"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/grau_bio"
-            android:text="Ans D"
-            android:textColor="@color/black" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/submit_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/choices_layout"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="10dp"
-
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/grau_bio"
-        android:text="Submit" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="170dp"
-        android:layout_height="129dp"
-        android:gravity="top"
-        app:srcCompat="@drawable/sbm_logo_cmyk_4c_300dpi_klein"
-        tools:ignore="MissingConstraints" />
 
 </RelativeLayout>

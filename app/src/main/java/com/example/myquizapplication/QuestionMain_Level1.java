@@ -1,21 +1,19 @@
 package com.example.myquizapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionMain extends AppCompatActivity implements View.OnClickListener{
-
+public class QuestionMain_Level1 extends AppCompatActivity implements View.OnClickListener{
 
     private String[] levelString = {
             "1/10",
@@ -34,18 +32,18 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
 
     TextView totalQuestionTextView;
     TextView questionTextView;
-    TextView questionTotal;
     Button ansA,ansB,ansC,ansD;
+    TextView questionTotal;
     Button submitBtn;
     SeekBar seekbar;
 
-
-    int score = 0;
-    int question = 0;
+    private int score = 0;
+    private int question = 0;
     int totalQuestions = QuestionAnswer.questions.length;
-    int currentQuestionIndex = 0;
+    private int currentQuestionIndex = 0;
     String selectedAnswer = "";
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +53,8 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
         questionTextView = findViewById(R.id.question);
 
         questionTotal = findViewById(R.id.questionScore);
-
+        //questionTextView.setAutoSizeTextTypeUniformWithConfiguration(10,20,2,1);
+        //questionTextView.getAutoSizeMinTextSize();
         ansA = findViewById(R.id.ans_A);
         ansB = findViewById(R.id.ans_B);
         ansC = findViewById(R.id.ans_C);
@@ -127,14 +126,14 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
 
 
         // TODO Change ANSWER to different questions
-        questionTextView.setText(QuestionAnswer.questions[currentQuestionIndex]);
+        questionTextView.setText(QuestionAnswer_Level1.questions[currentQuestionIndex]);
 
         questionTotal.setText(levelString[currentQuestionIndex]);
 
-        ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
-        ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
-        ansC.setText(QuestionAnswer.choices[currentQuestionIndex][2]);
-        ansD.setText(QuestionAnswer.choices[currentQuestionIndex][3]);
+        ansA.setText(QuestionAnswer_Level1.choices[currentQuestionIndex][0]);
+        ansB.setText(QuestionAnswer_Level1.choices[currentQuestionIndex][1]);
+        ansC.setText(QuestionAnswer_Level1.choices[currentQuestionIndex][2]);
+        ansD.setText(QuestionAnswer_Level1.choices[currentQuestionIndex][3]);
 
         ansA.setBackgroundResource(R.drawable.roundstyle);
         ansB.setBackgroundResource(R.drawable.roundstyle);

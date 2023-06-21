@@ -15,7 +15,7 @@
         android:layout_height="200dp"
         android:layout_centerInParent="true"
         android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/grau_bio"
+        android:backgroundTint="@color/white"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="Level 1"

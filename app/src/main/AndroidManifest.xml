@@ -20,6 +20,10 @@
             android:name=".QuestionMain"
             android:exported="false" />
         <activity
+            android:name=".QuestionMain_Level1"
+            android:exported="false" />
+
+        <activity
             android:name=".StartView"
             android:exported="true">
             <intent-filter>

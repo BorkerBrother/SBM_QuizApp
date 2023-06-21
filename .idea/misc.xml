@@ -4,11 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1495" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/buttoncolor.xml" value="0.2135" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/custom_seekbar_progress.xml" value="0.13" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1495" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/level1.xml" value="0.2" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/roundstyle.xml" value="0.188" />
-        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_question_menu.xml" value="0.4" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/roundstyle_pressed.xml" value="0.139" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/drawable/seekbar_thumb.xml" value="0.13" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_main_level1.xml" value="0.1" />
+        <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_question_menu.xml" value="0.2" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/activity_start_view.xml" value="0.2" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/fragment_1.xml" value="0.25" />
         <entry key="..\:/Users/Birgi/AndroidStudioProjects/MyQuizApplication/app/src/main/res/layout/fragment_2.xml" value="0.2359375" />

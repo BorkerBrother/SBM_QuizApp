@@ -11,11 +11,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <Button
+        android:id="@+id/lvl2Button"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
         android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/grau_bio"
+        android:backgroundTint="@color/white"
         android:gravity="center"
         android:text="Level 2"
         android:fontFamily="sans-serif-black"
