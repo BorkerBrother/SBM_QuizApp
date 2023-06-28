@@ -4,6 +4,7 @@ import static android.app.DownloadManager.COLUMN_ID;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -36,7 +37,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("drop Table if exists allusers");
+    }
 
+    public Boolean insertData(String email, String passwort){
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("email", email);
+        contentValues.put("passwort", passwort);
+        long result = MyDatabase.insert("alluser",null,contentValues);
+
+        if (result == -1){
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+    public Boolean checkEmail(String email){
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+        Cursor cursor = MyDatabase.rawQuery("Select * from allusers where email = ?", new String[]{email});
+
+        if (cursor.getCount() > 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public Boolean checkEmailpassword(String email, String passwort){
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+        Cursor cursor = MyDatabase.rawQuery("Select * from allusers where email = ? and passwort = ?", new String[]{email, passwort});
+
+        if(cursor.getCount() > 0 ){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     // Methode zum Aktualisieren des Scores eines Benutzers
