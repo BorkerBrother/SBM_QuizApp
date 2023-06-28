@@ -90,10 +90,10 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
         //ansC.setBackgroundColor(Color.RED);
         //ansD.setBackgroundColor(Color.RED);
 
-        ansA.setBackgroundResource(R.drawable.buttoncolor);
-        ansB.setBackgroundResource(R.drawable.buttoncolor);
-        ansC.setBackgroundResource(R.drawable.buttoncolor);
-        ansD.setBackgroundResource(R.drawable.buttoncolor);
+        //ansA.setBackgroundResource(R.drawable.buttoncolor);
+        //ansB.setBackgroundResource(R.drawable.buttoncolor);
+        //ansC.setBackgroundResource(R.drawable.buttoncolor);
+        //ansD.setBackgroundResource(R.drawable.buttoncolor);
 
         ansA.setBackgroundResource(R.drawable.roundstyle);
         ansB.setBackgroundResource(R.drawable.roundstyle);
@@ -113,7 +113,7 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
         }else{
             // choices button clicked
             selectedAnswer = clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(Color.WHITE);
+            //clickedButton.setBackgroundResource(R.drawable.buttoncolor);
             clickedButton.setBackgroundResource(R.drawable.roundstyle_pressed);
         }
     }
@@ -158,6 +158,8 @@ public class QuestionMain extends AppCompatActivity implements View.OnClickListe
                     .setNegativeButton("Menu",((dialogInterface, i) -> goMenu()))
                     .setCancelable(false)
                     .show();
+
+
         }
         else{
             passStatus = "Leider hast du nicht bestanden";

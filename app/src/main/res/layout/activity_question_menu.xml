@@ -34,13 +34,12 @@
         tools:ignore="MissingConstraints" />
 
     <SeekBar
-        android:id="@+id/seekScore"
+        android:id="@+id/seekScoreBees"
         android:layout_width="281dp"
-        android:layout_height="29dp"
+        android:layout_height="23dp"
         android:thumbTint="@color/white"
-        android:progress="10"
         android:progressTint="@color/grau_bio"
-
+        android:thumb="@drawable/seekbar_thumb"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekScore"
+        app:layout_constraintTop_toBottomOf="@+id/seekScoreBees"
         app:layout_constraintVertical_bias="0.235"
         tools:ignore="MissingConstraints"
         />
