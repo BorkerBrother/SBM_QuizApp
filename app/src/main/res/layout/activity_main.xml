@@ -103,7 +103,7 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMaxTextSize="21sp"
             app:autoSizeMinTextSize="20sp"
             app:autoSizeStepGranularity="2sp"
             app:layout_constraintEnd_toEndOf="parent"

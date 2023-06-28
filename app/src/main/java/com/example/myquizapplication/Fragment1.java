@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 public class Fragment1 extends Fragment {
 
-    private Button lvl1Button;
+    private TextView lvl1Button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,7 +33,7 @@ public class Fragment1 extends Fragment {
     }
 
     public void openLevel(){
-        Intent intent = new Intent(getActivity(), QuestionMain.class);
+        Intent intent = new Intent(getActivity(), QuestionMain_Level_1.class);
         startActivity(intent);
     }
 }

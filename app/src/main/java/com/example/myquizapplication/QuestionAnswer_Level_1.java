@@ -1,9 +1,9 @@
 package com.example.myquizapplication;
 
-public class QuestionAnswer {
+public class QuestionAnswer_Level_1 {
 
     public static String questions[] = {
-        "Frage 1 A Richtig",
+        "Wofür stehen die Siegel der Anbauverbände",
         "Frage 2 B Richtig",
         "Frage 3 C Richtig",
         "Frage 4 D Richtig",
@@ -16,7 +16,11 @@ public class QuestionAnswer {
     };
 
     public static String choices[][] = {
-            {"A","B","C","D"},
+            {"konventionelle Futtermittel dürfen in einem sehr begrenzen Rahmen zugefüttert werden",
+                    "Die Anbauverbände verlangen, dass der Betrieb komplett ökologisch arbeitet",
+                    "Die Anbauverbände verlangen, dass der Betrieb teilweise ökologisch arbeitet",
+                    "Wesentlich mehr Tiere je Hektar als das EU-Siegel"},
+
             {"A","B","C","D"},
             {"A","B","C","D"},
             {"A","B","C","D"},
@@ -30,7 +34,7 @@ public class QuestionAnswer {
     };
 
     public static String correctAnswers[] = {
-            "A",
+            "B",
             "B",
             "C",
             "D",

@@ -34,7 +34,6 @@ public class QuestionMenu extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor preferencesEditor;
 
-    final String key = "speicher";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class QuestionMenu extends AppCompatActivity {
         seekbarBees = findViewById(R.id.seekScoreBees);
         seekbarBees.setEnabled(false);
         seekbarBees.setProgressDrawable(getResources().getDrawable(R.drawable.custom_seekbar_progress));
-        seekbarBees.setThumb(getResources().getDrawable(R.drawable.seekbar_thumb));
+        //seekbarBees.setThumb(getResources().getDrawable(R.drawable.biene_test));
 
     }
 

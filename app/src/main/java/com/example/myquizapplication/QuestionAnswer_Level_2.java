@@ -1,6 +1,6 @@
 package com.example.myquizapplication;
 
-public class QuestionAnswer_Level1 {
+public class QuestionAnswer_Level_2 {
 
     public static String questions[] = {
         "Welche Temperatur sollte für die Lagerung von frischen Milchprodukten in einem Supermarkt eingehalten werden, um die Qualität zu gewährleisten?",
