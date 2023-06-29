@@ -28,9 +28,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Erstellt die Tabelle für Benutzer
         String createTableUsers = "CREATE TABLE " + TABLE_USERS + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_USERNAME + " TEXT UNIQUE, " +
+                "email TEXT," +
                 COLUMN_PASSWORD + " TEXT," +
-                COLUMN_SCORE + " INTEGER DEFAULT 0)";;
+                COLUMN_SCORE + " INTEGER DEFAULT 0)";
         sqLiteDatabase.execSQL(createTableUsers);
 
     }
@@ -45,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
         contentValues.put("passwort", passwort);
-        long result = MyDatabase.insert("alluser",null,contentValues);
+        long result = MyDatabase.insert(TABLE_USERS,null,contentValues);
 
         if (result == -1){
             return false;
@@ -68,14 +68,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean checkEmailpassword(String email, String passwort){
+    public Boolean checkEmailpassword(String email, String passwort) {
         SQLiteDatabase MyDatabase = this.getWritableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from allusers where email = ? and passwort = ?", new String[]{email, passwort});
+        Cursor cursor = MyDatabase.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " +
+                COLUMN_USERNAME + " = ? AND " + COLUMN_PASSWORD + " = ?", new String[]{email, passwort});
 
-        if(cursor.getCount() > 0 ){
+        if (cursor.getCount() > 0) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }

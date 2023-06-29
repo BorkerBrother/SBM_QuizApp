@@ -14,6 +14,13 @@ public class LoginActivity extends AppCompatActivity {
     ActivityLoginAcitvityBinding binding;
     DatabaseHelper databaseHelper;
 
+    // Definieren Sie den Testbenutzer
+    String testUsername = "test";
+    String testPassword = "test";
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +28,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         databaseHelper = new DatabaseHelper(this);
+
+        // Fügen Sie den Testbenutzer hinzu
+        boolean isInserted = databaseHelper.insertData(testUsername, testPassword);
+
+        if (isInserted) {
+            System.out.println("Testbenutzer wurde erfolgreich hinzugefügt.");
+        } else {
+            System.out.println("Fehler beim Hinzufügen des Testbenutzers.");
+        }
 
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
