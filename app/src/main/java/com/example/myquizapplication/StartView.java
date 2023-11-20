@@ -33,7 +33,7 @@ public class StartView extends AppCompatActivity implements View.OnClickListener
     }
 
     public void openActivity(){
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, QuestionMenu.class);
         startActivity(intent);
     }
 

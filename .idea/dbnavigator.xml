@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="357b03fc-deb7-4e06-ad2d-f1ff8dd187e4">
-      <console name="Connection" type="STANDARD" schema="SuperBioMarktTest" session="Main" />
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
